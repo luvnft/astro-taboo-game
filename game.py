@@ -3,7 +3,6 @@ import pandas as pd
 import random
 import time
 
-# safe_rerun() yardımcı fonksiyonu: st.experimental_rerun() veya st.rerun() mevcutsa onu kullanır.
 def safe_rerun():
     if hasattr(st, "experimental_rerun"):
         st.experimental_rerun()
@@ -12,18 +11,16 @@ def safe_rerun():
     else:
         raise Exception("Streamlit rerun function not found. Please update Streamlit.")
 
-# Kelime dosyasını yükle (çalışma dizininizde "words.csv" dosyası bulunmalı; sütun adı "words" olmalı)
 def load_words(filename="words.csv"):
     df = pd.read_csv(filename)
     return df["words"].tolist()
 
-# Session state başlangıç ayarları
 if "score" not in st.session_state:
     st.session_state.score = {"Team 1": 0, "Team 2": 0}
 if "current_team" not in st.session_state:
     st.session_state.current_team = "Team 1"
 if "words_queue" not in st.session_state:
-    st.session_state.words_queue = []  # Tur için seçilen kelimeler kuyruk olarak tutulacak.
+    st.session_state.words_queue = [] 
 if "words" not in st.session_state:
     st.session_state.words = load_words()
 if "team_names" not in st.session_state:
@@ -43,19 +40,16 @@ if "round_words" not in st.session_state:
 if "time_up" not in st.session_state:
     st.session_state.time_up = False
 
-# Sayfa düzeni
 st.set_page_config(page_title="Astronomy Taboo Game", layout="wide")
 st.title("🌌 Astronomy Taboo Game 🌠")
 st.markdown("---")
 
-# Yeni turun başlatılması: Tur başladığında sabit sayıda kelime seçilip kuyruk oluşturulur.
 def start_new_round():
     st.session_state.words_queue = random.sample(st.session_state.words, st.session_state.round_words)
     st.session_state.round_started = True
     st.session_state.start_time = time.time()
     st.session_state.time_up = False
 
-# Turun bitirilmesi: Mevcut takımın tur özeti oluşturulur, sıra diğer takıma verilir.
 def end_round():
     st.session_state.round_summary.append({
          "team": st.session_state.team_names[st.session_state.current_team],
@@ -66,14 +60,12 @@ def end_round():
     st.session_state.start_time = None
     safe_rerun()
 
-# Kalan süreyi hesaplayan yardımcı fonksiyon (zamanlayıcı için)
 def calculate_remaining_time():
     if st.session_state.start_time:
         elapsed = time.time() - st.session_state.start_time
         return max(st.session_state.timer_duration - int(elapsed), 0)
     return st.session_state.timer_duration
 
-# Oyun başlamadıysa: Ayarların yapıldığı sayfa
 if not st.session_state.game_started:
     st.sidebar.header("⚙️ Game Settings")
     team1 = st.sidebar.text_input("Team 1 Name", "Team 1")
@@ -89,16 +81,13 @@ if not st.session_state.game_started:
         st.session_state.round_words = round_words
         safe_rerun()
 
-# Oyun başladıysa:
 else:
     st.sidebar.header("🎮 Controls")
     current_team_name = st.session_state.team_names[st.session_state.current_team]
 
-    # Eğer tur aktif değilse (yeni tur başlamadan önce veya süre dolunca):
     if not st.session_state.round_started:
         st.header("Round Summary")
         if st.session_state.round_summary:
-            # En son tamamlanan turun özetini gösteriyoruz.
             last_summary = st.session_state.round_summary[-1]
             st.write(f"{last_summary['team']}'s round completed with {last_summary['score']} points.")
         else:
@@ -108,15 +97,12 @@ else:
             start_new_round()
             safe_rerun()
     else:
-        # Python tarafında kalan süreyi kontrol ediyoruz: Süre dolduysa turu sonlandır.
         if st.session_state.start_time and (time.time() - st.session_state.start_time) >= st.session_state.timer_duration:
             end_round()
 
-        # Eğer kelime kuyruğu boşsa (tüm kelimeler doğru tahmin edilmişse) turu sonlandır.
         if not st.session_state.words_queue:
             end_round()
 
-        # JS zamanlayıcı: Ekranda kalan süreyi günceller. Kalan süre 0 olduğunda boş metin gösterilir.
         if st.session_state.start_time:
             timer_html = f"""
             <script>
@@ -142,7 +128,6 @@ else:
             """
             st.components.v1.html(timer_html, height=50)
 
-        # Şu anki kelime: Kelime kuyruğunun ilk elemanı gösterilir.
         if st.session_state.words_queue:
             current_word = st.session_state.words_queue[0]
         else:
@@ -155,7 +140,6 @@ else:
         </div>
         """, unsafe_allow_html=True)
 
-        # Özel CSS ekle
         st.markdown("""
         <style>
             /* Sadece bu iki buton için özel stil */
@@ -170,7 +154,6 @@ else:
         </style>
         """, unsafe_allow_html=True)
 
-        # Butonlarınızın olduğu kısım
         col1, col2 = st.columns(2)
         with col1:
             if st.button("✅ Correct", use_container_width=True, key="correct_guess"):
@@ -189,7 +172,6 @@ else:
                     st.session_state.words_queue.append(word)
                 safe_rerun()
 
-    # Skor tablosu ve önceki tur özetleri (sidebar'da)
     st.sidebar.markdown("---")
     st.sidebar.subheader("🏆 Scoreboard")
     for team in ["Team 1", "Team 2"]:
@@ -203,7 +185,6 @@ else:
         for summary in st.session_state.round_summary[-3:]:
             st.sidebar.write(f"- {summary['team']}'s round completed with {summary['score']} points.")
 
-    # Oyunu sıfırlama butonu
     if st.sidebar.button("🔄 Reset Game"):
         for key in list(st.session_state.keys()):
             del st.session_state[key]
