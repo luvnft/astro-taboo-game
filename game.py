@@ -149,7 +149,7 @@ else:
             current_word = "🎉 All words completed!"
         st.markdown(f"""
         <div style="border: 2px solid #4a4a4a; border-radius: 10px; padding: 30px; 
-                    text-align: center; font-size: 36px; font-weight: bold;
+                    text-align: center; font-size: 36px; font-weight: bold; color:blue;
                     margin: 20px 0; background: #f8f9fa;">
             {current_word}
         </div>
