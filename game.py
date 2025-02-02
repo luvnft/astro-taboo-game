@@ -173,7 +173,7 @@ else:
         # Butonlarınızın olduğu kısım
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("✅ Correct Guess", use_container_width=True, key="correct_guess"):
+            if st.button("✅ Correct", use_container_width=True, key="correct_guess"):
                 # Mevcut iş mantığı
                 st.session_state.score[st.session_state.current_team] += 1
                 if st.session_state.words_queue:
