@@ -310,6 +310,7 @@ else:
 
             st.markdown(history_html, unsafe_allow_html=True)
 
+        # Round Control
         if not st.session_state.round_started:
             st.markdown("---")
             st.markdown(f"### ⏭️ Next Team: **{st.session_state.team_names[st.session_state.current_team]}**")
@@ -320,7 +321,6 @@ else:
 if st.session_state.game_started and st.session_state.round_started:
     elapsed = time.time() - st.session_state.start_time
     remaining = max(0, st.session_state.timer_duration - elapsed)
-    st_autorefresh(interval=1000, key="timer_refresh")
 
     if remaining <= 0 or st.session_state.words_processed >= st.session_state.round_words:
         end_round()
@@ -371,3 +371,5 @@ if st.session_state.game_started and st.session_state.round_started:
                 st.session_state.taboo_count += 1
                 st.session_state.words_queue.pop(0)
                 safe_rerun()
+
+    st_autorefresh(interval=1000, key="timer_refresh")
