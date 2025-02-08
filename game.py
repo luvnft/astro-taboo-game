@@ -316,22 +316,17 @@ else:
             if st.button("⏱️ Start Round", use_container_width=True, type="primary"):
                 start_new_round()
 
+# Game Play
 if st.session_state.game_started and st.session_state.round_started:
     elapsed = time.time() - st.session_state.start_time
     remaining = max(0, st.session_state.timer_duration - elapsed)
-
-    # Auto-refresh'i sadece round aktifken ve 1 saniye aralıklarla çalıştır
-    if st.session_state.round_started:
-        st_autorefresh(interval=1000, key="timer_refresh", limit=st.session_state.timer_duration)
+    st_autorefresh(interval=1000, key="timer_refresh")
 
     if remaining <= 0 or st.session_state.words_processed >= st.session_state.round_words:
         end_round()
     else:
-        # Timer kısmına unique key ekleyelim
-        timer_key = f"timer_{int(time.time())}"  # Unique key oluştur
-
         st.markdown(f"""
-        <div class="timer-box" key="{timer_key}">
+        <div class="timer-box">
             <div style="font-size: 18px; margin-bottom: 8px;">⏳ Remaining Time</div>
             <div style="font-size: 36px; font-weight: 800;">
                 {int(remaining)}<span style="font-size: 20px">s</span>
