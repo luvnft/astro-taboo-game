@@ -1,11 +1,8 @@
-
-
 import streamlit as st
 import pandas as pd
 import random
 import time
 from streamlit_autorefresh import st_autorefresh
-
 st.set_page_config(page_title="Astronomy Taboo Game", layout="centered")
 
 def safe_rerun():
@@ -56,7 +53,6 @@ for key, value in defaults.items():
         # List veya dict ise kopyalayalım, aksi halde direkt ata
         st.session_state[key] = value.copy() if isinstance(value, (list, dict)) else value
 
-st.set_page_config(page_title="Astronomy Taboo Game", layout="centered")
 st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">    """,
