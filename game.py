@@ -10,8 +10,7 @@ def safe_rerun():
 
 def load_words():
     try:
-        url = "https://docs.google.com/spreadsheets/d/1ORkZUxXeX5wmt2VbZoj797Sy-Wykx5dV6ALa1jNjgjk/export?format=csv"
-        df = pd.read_csv(url)
+        df = pd.read_csv("test_words.csv")
         return [
             {
                 "main_word": row["words"],
@@ -66,13 +65,9 @@ st.markdown(
 
         .main-title {
             text-align: center;
-            background: linear-gradient(145deg, #2b5876, #4e4376);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
             margin: 0 0 25px 0 !important;
             font-size: 3em !important;
-            padding: 10px;
+            padding: 5px;
             letter-spacing: 1px;
             font-weight: 700;
             font-family: 'Helvetica', sans-serif;            
