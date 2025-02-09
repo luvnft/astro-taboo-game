@@ -13,7 +13,7 @@ def safe_rerun():
 
 def load_words():
     try:
-        df = pd.read_csv("test_words.csv")
+        df = pd.read_csv("astro taboo game-words.csv")
         words = [
             {
                 "main_word": row["words"],
