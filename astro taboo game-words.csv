@@ -1,0 +1,122 @@
+words,taboo1,taboo2,taboo3
+Flat,Kalibrasyon,Dark,Bias
+Dark,Kalibrasyon,Flat,Bias
+Bias,Kalibrasyon,Flat,Dark
+İndirgeme,AstroImageJ,Maxim DL,C-Munipack
+Maxim DL,Gözlem,Program,Bilgisayar
+Tayf,T80,Fotometri,Spektroskopi
+Merkür,Gezegen,En yakın,Güneş Sistemi
+Venüs,En sıcak,Sera,Güzellik Tanrıçası
+Dünya,Yaşam,Ev,Soluk Mavi Nokta
+Mars,Elon Musk,Kızıl Gezegen,Phobos/Deimos
+Jüpiter,Kırmızı leke,En büyük,Galileo Uyduları
+Satürn,Gezegen,Halka,Titan
+Uranüs,Buz,Gezegen,Neptün
+T40,Tayf,Rasathane,Teleskop
+T35,Fotometri,Rasathane,Teleskop
+Odak Uzunluğu,CCD,Oran,Teleskop
+Focuser,Odak,CCD,Netleştirmek
+CCD,Kamera,Görüntü,Piksel
+Filtre Tekeri,Renk,Bessel-BVRI,SDSS-ugriz
+Mukayese Yıldızı,Gözlem,Referans,Parlaklık
+Birinci Minimum,Işık Eğrisi,0 ya da 1,Evre
+İkinci Mininum,Işık Eğrisi,0.5,Evre
+Kırmızıya Kayma,Doppler Etkisi,Mavi,Uzaklık
+Doppler Etkisi,Ambulans,Frekans,Ses
+Kepler Yasaları,Elips,Eşit Zamanda Eşit Alanlar,a3/P2
+Eylemsizlik,Newton,F=ma,Araba
+Etki-Tepki,Newton,Kuvvet,Eşit
+Büyütme Oranı,Teleskop,Odak Uzunluğu,Göz merceği
+Görünür Parlaklık,Mutlak Parlaklık,Kadir,Yıldız
+Mutlak Parlaklık,10 parsek,Görünür Parlaklık,Yıldız
+Parsek,Uzaklık Birimi,Işık yılı,3.26 ışık yılı
+Gelgit Etkisi,Ay,Deniz,Tedirginlik
+Deimos,Uydu,Mars,Mitoloji
+Phobos,Uydu,Mars,Mitoloji
+Titan,Satürn,Uydu,Gezegen
+Io,Uydu,Jüpiter,Volkanik
+Europa,Hayat,Jüpiter,Galileo
+Ganymede,Uydu,Jüpiter,En büyük
+Callisto,Uydu,Jüpiter,En uzak
+Anakol,HR Diyagramı,Güneş,Band
+HR Diyagramı,Anakol,Işınım Gücü,Tayf Türü
+Beyaz Cüce,Güneş,HR Diyagramı,Evrim
+Nötron Yıldızı,Evrim,Pulsar,Yaşam
+Karadelik,Yıldız,Interstellar,Olay Ufku
+Süpernova,Kütle,Patlama,Yıldız
+Kahverengi Cüce,Sönük,HR Diyagramı,Yıldız
+Lagrange Noktası,Denge,Uydu,İki Cisim
+Ötegezegen,Keşif,Güneş Sistemi,51 Pegasi
+Eksantrisite,Basıklık,Yörünge,Elips
+Yörünge Eğim Açısı,Örtme-Örtülme,Bakış Doğrultusu,Derece
+Yarı-Büyük Eksen Uzunluğu,Elips,Yörünge,Büyüklük
+Kuiper Kuşağı,Güneş Sistemi,Uranüs,En dış 
+Güneş Tutulması,Ay,Dünya,Tarih
+Işık Eğrisi,Akı,Zaman,Grafik
+Kadir,Parlaklık,Birim,Logaritmik
+TESS,Işık Eğrisi,Ötegezegen,Yapay uydu
+Gaia,Konum astronomisi,3-boyutlu harita,Yapay uydu
+Işık yılı,Mesafe,Zaman,Uzaklık
+Radyoastronomi,Anten,Uzun dalga,Atmosfer
+Betelgeuse,Kış Üçgeni,Orion,Takımyıldızı
+Orion,Kemer,Sirius,Takımyıldızı
+Polaris,Kutup Yıldızı,Kuzey,Demir Kazık
+Sirius,Parlak,Harry Potter,Köpek
+Procyon,Kış Üçgeni,Küçük Köpek,Takımyıldızı
+Vega,Parlak,Kadir,Presesyon
+Fotometri,Tayf,Işık Eğrisi,Gözlem
+Güneş Lekesi,Siyah nokta,Soğuk,Konveksiyon
+13.8 Milyar Yıl,Evren,Yaş,Big Bang
+Karacisim Işıması,Yıldız,İdeal,Soğurma
+James Webb Uzay Teleskobu,Ötegezegen,Atmosfer,Teleskop
+Astronomi Birimi,Dünya,Güneş,Mesafe
+Magellan Bulutsuları,Güney yarımküre,"Büyük, Küçük",Galaksi
+Periyot,Tam Tur,Dönem,Frekans analizi
+Dalgaboyu,Angstrom,Birim,Lambda
+İnterpolasyon,Ara değer,Fit,Hesaplama
+Ekstrapolasyon,Yeni veri,Nokta,Tahmin
+Lüminosite,Işınım Gücü,Yarıçap,Sıcaklık
+Rayleigh Kriteri,Ayırma Gücü,Teleskop Çapı,1.22
+Tayf Çizgisi,T80,Soğurma,Enerji Geçişi
+Gözlem Sonu Raporu,T35,T80,Site
+Astrofizik,Astronomi,Bilim Dalı,Yıldız
+Coude Teleskobu,Göz merceği,Güneş,Gezegen
+Chandrasekhar Limiri,Beyaz Cüce,Orbital,Basınç
+Schwarzschild Yarıçapı,Karadelik,Olay Ufku,Interstellar
+Özhareket,Proper Motion,Uzay Hareketi,Hız
+Paralaks,Dünya,Açı,6 ay
+Hidrojen-Alfa Çizgisi,6563 Angstrom,Balmer,2-3 enerji geçişi
+Bolometrik Parlaklık,Dalgaboyu,Görünür,Mutlak
+Roche Limiti,Denge,Jüpiter,Lagrange Noktası
+Efemeris,Işık elemanı,T0,P
+Albedo,Yansıtma,Ay,Gezegen
+Zeeman Etkisi,Yarılma,Manyetizma,Tayf
+Planetesimal,Gezegen,Genç,Protoplanetary disk
+SIMBAD,Veri,Koordinat,Site
+Stellarium,Program,Koordinat,Flat
+PHD2 Guiding,Takip,Program,Piksel
+AstroImageJ,İndirgeme,Mukayese,Align
+Presesyon,Nütasyon,Topaç,26 bin yıl
+Pogson Formülü,Denklem,-2.5log,m1-m2
+Işık-Zaman Etkisi,O-C Diyagramı,Ortak kütle merkezi,Hız
+Burçlar Kuşağı,Güneş,Astroloji,Doğum Günü
+Zenit,Tepe,Gökküresi,Nadir
+Galileo,Jüpiter Uyduları,Teleskop,Bilim insanı
+Sefeid,Değişen Yıldızlar,Uzaklık,Standart kandil
+Ceres,Cüce gezegen,Asteroid,Plüton
+Kopernik,Güneş,Merkez,Bilim insanı
+Hubble Sabiti,Evren,Genişleme,Galaksi
+Ekliptik,Güneş,Yörünge,Hareket
+PopI Yıldızları,Açık küme,Genç,Galaksi
+Perseid,Halk günü ,Meteor,Yağmur
+Pleiades,Yıldız,Ülker,Yedi Kandilli Süreyya
+PopII Yıldızları,Yıldız,Küresel,Yaşlı
+Güney Haçı,Kutup Yıldızı,Polaris,Güney Yarım Küre
+Charon,Plüton,Uydu,Ay
+ISS,Uzay,Nasa,Astronot
+Düğüm Noktası,Ekliptik,Koç Noktası,Tutulma
+Alfa Centauri,Yıldız,En yakın,Güneş Sistemi
+Kimyasal Bolluk,Metal,Hidrojen,Fiziksel
+Fotosfer,Güneş,Işık,Dış
+Van Allen Kuşağı,Manyetik ,Rüzgar,Güneş
+Messier Katoloğu,Galaksi,Nebula,Yıldız
