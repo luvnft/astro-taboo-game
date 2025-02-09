@@ -12,13 +12,6 @@
       padding: 0;
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
     h1, h2, h3 {
       color: #333;
     }
