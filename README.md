@@ -80,4 +80,4 @@ Contributions and suggestions are welcome. You can enhance the gameplay, add mor
 
 ---
 
-*Enjoy exploring the cosmos, one word at a time!*
+*PS: This game was created to make observation nights at the observatory more enjoyable with observers. Some of them even contributed to the word list. Their support made this project more meaningful—thank you!*
